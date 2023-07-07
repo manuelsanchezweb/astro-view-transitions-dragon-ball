@@ -1,0 +1,49 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Onboarding del proyecto",
+  "steps": [
+    {
+      "file": "README.md",
+      "description": "Aquí tienes la explicación del proyecto. Será nuestro punto de partida.",
+      "line": 9,
+      "title": "Empezamos por el README"
+    },
+    {
+      "file": "package.json",
+      "description": "Como puedes ver el proyecto está hecho con Astro. Si tienes problemas con npm, prueba a usar a partir de la versión 18 de node. Yo lo he hecho con pnpm y no ha habido problemas.",
+      "line": 12,
+      "title": "Las dependencias principales"
+    },
+    {
+      "file": "src/data/characters.ts",
+      "description": "Es aquí donde tenemos los datos. De momento, lo hacemos así, pero se puede plantear en un futuro guardar está información fuera del proyecto.",
+      "line": 9,
+      "title": "Los datos de los personajes"
+    },
+    {
+      "file": "src/layouts/Layout.astro",
+      "description": "Es aquí donde sucede toda la magia, vamos a interceptar el evento del navegador cuando intentemos cambiar a una página dentro del mismo origen. Para preparar la animación después tenemos que hacer unas cuantas cosas más.",
+      "line": 47,
+      "title": "El script de la transición"
+    },
+    {
+      "file": "src/layouts/Layout.astro",
+      "description": "Primero, escribir esta <meta/> tag.",
+      "line": 17,
+      "title": "Primer paso: añadir meta tag"
+    },
+    {
+      "file": "src/components/CharacterItem.astro",
+      "description": "Añadir en el style lo que vemos con view-transition-name. Ojo: este valor tiene que ser el mismo que vayamos a poner en la otra parte. Por ejemplo, lo que vamos a hacer es animar la imagen de un personaje desde la posición original que tiene en la ruta \"/\" hacia la posición que tiene en la ruta \"/goku\" por ejemplo. Por ello tendremos que poner el mismo identificador en la imagen de la otra ruta, así que allá vamos.",
+      "line": 15,
+      "title": "Segundo paso: añadir el view-transition-name en una parte"
+    },
+    {
+      "file": "src/pages/[character].astro",
+      "description": "Aquí lo tenemos. Por cierto, también he animado el nombre del personaje además de la imagen siguiendo la misma lógica. ",
+      "line": 31,
+      "title": "Tercer paso: añadir el view-transition-name en la otra parte"
+    }
+  ],
+  "ref": "main"
+}

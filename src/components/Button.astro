@@ -1,0 +1,15 @@
+---
+export interface Props {
+	ariaLabel?: string;
+    classExtra?: string;
+    onClick?: any;
+}
+
+const { onClick, ariaLabel = "Default Function", classExtra } = Astro.props;
+
+---
+
+<button onclick={onClick} aria-label={ariaLabel} class={`bg-primary hover:bg-secondary transition-all px-4 py-2 rounded-sm ${classExtra} border border-black text-xs`}>
+    <slot>
+</button>
+

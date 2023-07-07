@@ -1,0 +1,26 @@
+---
+export interface Props {
+    id: string
+    name: string
+    img: string
+}
+
+const { id, name, img } = Astro.props
+---
+
+<a class="flex flex-col gap-2 group" href={`/${id}`}>
+    <figure
+        class="bg-secondary group-hover:bg-primary group-focus:bg-primary transition-all group-hover:contrast-125 group-hover:shadow-2xl"
+    >
+        <img
+            alt={`Perfil de ${name}`}
+            class="aspect-[1/1] h-full object-cover w-full max-w-full rounded"
+            src={img}
+            width="300"
+            height="300"
+            style={`view-transition-name: character-${id}`}
+        />
+    </figure>
+
+    <span class="font-semibold" style={`view-transition-name: characterName-${id}`}>{name}</span>
+</a>

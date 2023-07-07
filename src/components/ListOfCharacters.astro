@@ -1,0 +1,16 @@
+---
+import { characters } from '../data/characters'
+import CharacterItem from './CharacterItem.astro';
+---
+
+<ul class="grid grid-cols-2 md:grid-cols-5 gap-8 px-4">
+  {
+    characters.map(({ id, name, img }) => {
+      return (
+        <li class="max-w-[150px] max-h-[150px] border-2 border-black">
+            <CharacterItem id={id} name={name} img={img} />
+        </li>
+      )
+    })
+  }
+</ul>
